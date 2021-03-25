@@ -1,0 +1,206 @@
+<!-- Web Page About fashion 
+1) Make a sketch of the site by Figma.
+2) Find images, video.
+3) Write html and css.
+ -->
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title></title>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+     <style type="text/css">
+         *{
+             margin: 0px;
+             padding: 0px;
+             box-sizing: border-box;
+             text-decoration: none;
+         }
+ 
+         .container{
+             max-width: 1300px;
+             width: 100%;
+             margin: 0 auto;
+         }
+ 
+         /* navbar */
+        nav{
+            font-family: 'Abel', sans-serif;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        nav:after{
+            content:'';
+            clear:both;
+            display: table;
+        }
+
+        nav ul{
+            float: right;
+            list-style: none;
+            margin-right: 40px;
+            position: relative;
+        }
+        nav ul li{
+            float: left;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        nav ul li a{
+            color: black;
+            line-height: 70px;
+            padding: 8px 15px;
+        }
+
+        nav ul ul{
+            position: absolute;
+            top: 100px;
+            opacity: 0;
+            visibility: hidden;
+            transition: top .3s;
+            background: #d69d5c;
+            border-radius: 5px;
+        }
+        nav ul li:hover > ul{
+            top: 85px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        nav ul ul li a{
+            line-height: 50px;
+        }
+
+        nav ul li a:hover{
+            border-radius: 5px;
+            box-shadow: 0 0 5px #d69d5c, 0 0 5px #eeb663;
+            color: chocolate;
+        }
+        
+        nav ul ul li a:hover{
+            color: chocolate;
+            box-shadow: none;
+        }
+
+        nav ul ul li{
+            position: relative;
+            margin: 0px;
+            width: 110px;
+            float: none;
+            display: list-item;
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+        }
+        .navbar_links{
+            padding-top: 28px;
+        }
+        .logo{
+            float: left;
+            padding-left: 60px;
+        }
+
+        .show, .icon, input{
+            display: none;
+        }
+
+        @media all and (max-width: 900px) {
+            nav ul{
+                margin-right: 0px;
+                float: left;
+            }
+            .navbar_links{
+                padding-top: 0px;
+            }
+            nav .logo{
+                padding-left: 30px;
+                width: 100%;
+            }
+
+            nav ul li, nav ul ul li{
+                display: block;
+                width: 100%; 
+            }
+            nav ul ul{
+                top: 70px;
+                position: static;
+                border-top: none;
+                float: none;
+                display: none;
+                opacity: 1;
+                visibility: visible;
+            }
+            nav ul ul ul li{
+                position: static;
+            }
+            .show{
+                display: block;
+                padding: 0 15px;
+                line-height: 70px;
+                cursor: pointer;
+            }
+            .icon{
+                display: block;
+                position: absolute;
+                right: 40px;
+                line-height:70px;
+                font-size: 25px;
+                cursor: pointer;
+                color: black;
+            }
+            .show:hover{
+                color: chocolate;
+            }
+            .show + a, ul{
+                display: none;
+            }
+            [id^=btn]:checked + ul{
+                display: block;
+            }
+            nav ul li a:hover{
+                box-shadow: none;
+            }
+        }
+
+     </style>
+ </head>
+ <body>
+ 
+     <div class="header">
+         <div class="container">
+
+             <nav class="navbar">
+                 <div class="logo"><img src="logo.jfif" width="130px" height="120px"></div>
+                 <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
+                 <input type="checkbox" id="btn">
+                 <ul class="navbar_links">
+                     <li><a href="#fashion">Fashion</a></li>
+                     <li><a href="#beauty">Beauty</a></li>
+                     <li><a href="#culture">Culture</a></li>
+                     <li>
+                        <a href="#more">More</a>
+                        <label for="btn-1" class="show">More +</label>
+                        <input type="checkbox" id="btn-1">
+                            <ul>
+                                <li><a href="#">Contacts</a></li>
+                                <li><a href="#">About me</a></li>
+                            </ul>
+                     </li>
+                     <li><a href="#shopping">Shopping</a></li>
+                     <li><a href="#decor">Decor</a></li>
+                 </ul>
+             </nav>
+
+         </div>
+     </div>
+ 
+     <div class="section">
+         <div class="container_section">
+             
+         </div>
+     </div>
+ </body>
+ </html>
