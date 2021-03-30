@@ -1,32 +1,48 @@
-<!-- Web Page About fashion 
+<!-- Web Page About fashion
 1) Make a sketch of the site by Figma.
 2) Find images, video.
 3) Write html and css.
  -->
 
- <!DOCTYPE html>
- <html>
- <head>
-     <title></title>
-     <link rel="preconnect" href="https://fonts.gstatic.com">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-     <style type="text/css">
-         *{
-             margin: 0px;
-             padding: 0px;
-             box-sizing: border-box;
-             text-decoration: none;
-         }
- 
-         .container{
-             max-width: 1300px;
-             width: 100%;
-             margin: 0 auto;
-         }
- 
-         /* navbar */
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Neuton:wght@300&family=Satisfy&display=swap" rel="stylesheet">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .container{
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* navbar */
+        .container:after{
+            content: "";
+            display: block;
+            width: 1150px;
+            height: 0.5px;
+            margin: 0 80px;
+            background-color: black;
+        }
+
         nav{
             font-family: 'Abel', sans-serif;
             letter-spacing: 2px;
@@ -81,7 +97,7 @@
             box-shadow: 0 0 5px #d69d5c, 0 0 5px #eeb663;
             color: chocolate;
         }
-        
+
         nav ul ul li a:hover{
             color: chocolate;
             box-shadow: none;
@@ -89,7 +105,7 @@
 
         nav ul ul li{
             position: relative;
-            margin: 0px;
+            margin: 0;
             width: 110px;
             float: none;
             display: list-item;
@@ -109,11 +125,11 @@
 
         @media all and (max-width: 900px) {
             nav ul{
-                margin-right: 0px;
+                margin-right: 0;
                 float: left;
             }
             .navbar_links{
-                padding-top: 0px;
+                padding-top: 0;
             }
             nav .logo{
                 padding-left: 30px;
@@ -122,7 +138,7 @@
 
             nav ul li, nav ul ul li{
                 display: block;
-                width: 100%; 
+                width: 100%;
             }
             nav ul ul{
                 top: 70px;
@@ -142,6 +158,7 @@
                 line-height: 70px;
                 cursor: pointer;
             }
+
             .icon{
                 display: block;
                 position: absolute;
@@ -154,7 +171,7 @@
             .show:hover{
                 color: chocolate;
             }
-            .show + a, ul{
+            ul li .more, .show + a, ul{
                 display: none;
             }
             [id^=btn]:checked + ul{
@@ -163,44 +180,174 @@
             nav ul li a:hover{
                 box-shadow: none;
             }
+            .container:after{
+                display: none;
+            }
+        }
+        /*section*/
+        .section_image1{
+            border-radius: 150px;
+            margin: 90px 0 0 70px;
         }
 
-     </style>
- </head>
- <body>
- 
-     <div class="header">
-         <div class="container">
+        .container_section{
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+        }
 
-             <nav class="navbar">
-                 <div class="logo"><img src="logo.jfif" width="130px" height="120px"></div>
-                 <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
-                 <input type="checkbox" id="btn">
-                 <ul class="navbar_links">
-                     <li><a href="#fashion">Fashion</a></li>
-                     <li><a href="#beauty">Beauty</a></li>
-                     <li><a href="#culture">Culture</a></li>
-                     <li>
-                        <a href="#more">More</a>
-                        <label for="btn-1" class="show">More +</label>
-                        <input type="checkbox" id="btn-1">
-                            <ul>
-                                <li><a href="#">Contacts</a></li>
-                                <li><a href="#">About me</a></li>
-                            </ul>
-                     </li>
-                     <li><a href="#shopping">Shopping</a></li>
-                     <li><a href="#decor">Decor</a></li>
-                 </ul>
-             </nav>
+        .section_heading{
+            font-family: 'Cinzel';
+            font-size: 50px;
+            color: #D79E6A;
+            text-align: center;
+        }
+        .quote_nd{
+            font-family: 'Satisfy';
+        }
 
-         </div>
-     </div>
- 
-     <div class="section">
-         <div class="container_section">
-             
-         </div>
-     </div>
- </body>
- </html>
+        .section_all{
+            display: flex;
+        }
+        .section_info{
+            margin: 80px 0 0 70px;
+        }
+        .quote_st{
+            color: #706F6F;
+            font-family: 'Neuton';
+            font-size: 25px;
+            padding-left: 15px;
+        }
+        .quote_second{
+            width: 480px;
+            font-size: 25px;
+            font-family: 'Abel';
+            padding-top: 25px;
+            text-align: center;
+        }
+        /*section icons*/
+        .btn{
+            color: #704620;
+            font-family: 'Satisfy';
+            font-size: 22px;
+            background: #F2DBC6;
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+        .btn:hover{
+            background: #FFFBF5;
+        }
+        .section_bt{
+            padding: 40px 0 0 25px;
+        }
+        .section_fa{
+            display: flex;
+
+        }
+        /*    icons */
+        .fa {
+            padding: 15px;
+            font-size: 25px;
+            width: 55px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 30px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+        /*    next section  */
+        .next_section{
+            width:100%;
+            height: 170px;
+            background: #FFFBF5;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+
+        <nav class="navbar">
+            <div class="logo"><img src="logo.jfif" width="130px" height="120px"></div>
+            <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
+            <input type="checkbox" id="btn">
+            <ul class="navbar_links">
+                <li><a href="#fashion">Fashion</a></li>
+                <li><a href="#beauty">Beauty</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#shopping">Shopping</a></li>
+                <li><a href="#decor">Decor</a></li>
+                <li>
+                    <a class="more" href="#more">More</a>
+                    <label for="btn-1" class="show">More +</label>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">About me</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+
+    </div>
+</div>
+
+<div class="section">
+    <div class="container_section">
+        <div class="section_all">
+            <div class="section_image">
+                <img class="section_image1" src="image1.jpg" width="500px" height="300px">
+            </div>
+            <div class="section_info">
+                <div class="section_heading">Fashion <span class="quote_nd">Page</span></div>
+                <div class="quote_st">Fashion fades, only style remains the same.</div>
+                <div class="quote_second">
+                    <div class="quote_txt">Fashion is not something that exists in dresses only.
+                        Fashion is in the sky, in the street, fashion has to do with ideas,
+                        he way we live, what is happening.
+                    </div>
+                </div>
+                <div class="section_fa">
+                    <div class="section_bt"><a class="btn" href="#show">Show more</a></div>
+                    <div class="section_icons">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="next_section">
+
+</div>
+
+</body>
+</html>
